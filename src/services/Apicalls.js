@@ -22,9 +22,9 @@ export const GetSelectedImages = async () => {
   }
 };
 
-export const SetSelectedImages = async () => {
+export const SetSelectedImages = async (payload) => {
   try {
-    return await instance.get(`/image/set`);
+    return await instance.get(`/image/set/${payload.selectedId}`);
   } catch (error) {
     return error;
   }
